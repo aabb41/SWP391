@@ -1,0 +1,17 @@
+com\mycompany\farmer\resources\JakartaEE10Resource.class
+entity\Export_Batches.class
+entity\ProductImage.class
+entity\ProductWarehouses.class
+model\DBConnect.class
+entity\Import_Batches.class
+model\DAOProducts.class
+com\mycompany\farmer\JakartaRestConfiguration.class
+entity\ExportProduct.class
+entity\Product_Batches_Import.class
+entity\Product_Batches_Export.class
+entity\Category.class
+entity\ImportProduct.class
+entity\Products.class
+entity\Warehouses_Transfers.class
+entity\Warehouses.class
+entity\Supppliers.class
