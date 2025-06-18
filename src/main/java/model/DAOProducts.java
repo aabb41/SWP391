@@ -172,7 +172,7 @@ public class DAOProducts extends DBConnect{
             ResultSet rs = state.executeQuery(sql);
             
             while (rs.next()) {
-                int productId = rs.getInt("ProductId");
+                int productId = rs.getInt(1);
                 String productName = rs.getString("ProductName");
                 BigDecimal entryPrice = rs.getBigDecimal("EntryPrice");
                 BigDecimal retailPrice = rs.getBigDecimal("RetailPrice");
@@ -195,11 +195,11 @@ public class DAOProducts extends DBConnect{
                 
                 int status = rs.getInt("status");
                 
-                Products product = new Products(productId, productName, entryPrice, retailPrice, 
+                Products pro = new Products(productId, productName, entryPrice, retailPrice, 
                         description, wholesalePrice, unit, quantity, categoryId, 
                         supplierId, createAt, update, status);
                 
-                vector.add(product);
+                vector.add(pro);
             }
         } catch (SQLException ex) {
             Logger.getLogger(DAOProducts.class.getName()).log(Level.SEVERE, null, ex);
@@ -257,13 +257,5 @@ public class DAOProducts extends DBConnect{
             System.out.println(product);
         }
         
-        // Test getting product by ID
-        System.out.println("\nProduct with ID 1:");
-        Products product = dao.getProductById(1);
-        if (product != null) {
-            System.out.println(product);
-        } else {
-            System.out.println("Product not found");
-        }
     }
 }
